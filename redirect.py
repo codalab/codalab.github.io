@@ -17,8 +17,35 @@ worksheets = """
 0xfcace41fdeec45f3bc6ddf31107b829f
 """
 
+# wget -q --no-check-certificate https://competitions.codalab.org/competitions -O - | grep competitionID.*value
 competitions = """
 6991
+6981
+6971
+6961
+6351
+6121
+5191
+5181
+4081
+4711
+3791
+4971
+5941
+3221
+2611
+2321
+2241
+2231
+1661
+1471
+1381
+1311
+991
+981
+971
+1
+191
 """
 
 forums = """
@@ -36,3 +63,4 @@ def create_redirect(items, base_path, host):
 create_redirect(worksheets, 'worksheets', 'worksheets.codalab.org')
 create_redirect(competitions, 'competitions', 'competitions.codalab.org')
 create_redirect(forums, 'forums', 'competitions.codalab.org')
+create_redirect('AutoML', '', 'competitions.codalab.org')
