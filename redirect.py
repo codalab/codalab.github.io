@@ -60,7 +60,10 @@ def create_redirect(items, base_path, host):
         with open(os.path.join(base_path, item, 'index.html'), 'w') as f:
             print >>f, '<meta http-equiv="refresh" content="0; url=https://%s">' % os.path.join(host, base_path, item)
 
+create_redirect('worksheets', '', 'worksheets.codalab.org')
 create_redirect(worksheets, 'worksheets', 'worksheets.codalab.org')
+
+create_redirect('competitions', '', 'competitions.codalab.org')
+create_redirect('AutoML', '', 'competitions.codalab.org')
 create_redirect(competitions, 'competitions', 'competitions.codalab.org')
 create_redirect(forums, 'forums', 'competitions.codalab.org')
-create_redirect('AutoML', '', 'competitions.codalab.org')
