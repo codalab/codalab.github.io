@@ -63,7 +63,7 @@ def create_redirect(items, base_path, host):
 create_redirect('worksheets', '', 'worksheets.codalab.org')
 create_redirect(worksheets, 'worksheets', 'worksheets.codalab.org')
 
-create_redirect('competitions', '', 'competitions.codalab.org')
+create_redirect('competitions', 'competitions', 'competitions.codalab.org')
 create_redirect('AutoML', '', 'competitions.codalab.org')
 create_redirect(competitions, 'competitions', 'competitions.codalab.org')
 create_redirect(forums, 'forums', 'competitions.codalab.org')
