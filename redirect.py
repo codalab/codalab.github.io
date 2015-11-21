@@ -59,6 +59,8 @@ def create_redirect(items, base_path, host):
         os.system('mkdir -p ' + os.path.join(base_path, item))
         with open(os.path.join(base_path, item, 'index.html'), 'w') as f:
             print >>f, '<meta http-equiv="refresh" content="0; url=https://%s">' % os.path.join(host, base_path, item)
+        if item != item.lower():
+            create_redirect(item.lower(), base_path, host)
 
 create_redirect('worksheets', '', 'worksheets.codalab.org')
 create_redirect(worksheets, 'worksheets', 'worksheets.codalab.org')
