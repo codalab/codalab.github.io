@@ -57,15 +57,15 @@ def create_redirect(items, base_path, host):
         if not item: continue
         print os.path.join(host, base_path, item)
         os.system('mkdir -p ' + os.path.join(base_path, item))
+        web_path = host if '/' in host else os.path.join(host, base_path, item)
         with open(os.path.join(base_path, item, 'index.html'), 'w') as f:
-            print >>f, '<meta http-equiv="refresh" content="0; url=https://%s">' % os.path.join(host, base_path, item)
-        if item != item.lower():
-            create_redirect(item.lower(), base_path, host)
+            print >>f, '<meta http-equiv="refresh" content="0; url=https://%s">' % web_path
 
 create_redirect('worksheets', '', 'worksheets.codalab.org')
 create_redirect(worksheets, 'worksheets', 'worksheets.codalab.org')
 
 create_redirect('competitions', 'competitions', 'competitions.codalab.org')
-create_redirect('AutoML', '', 'competitions.codalab.org')
+create_redirect('AutoML', '', 'competitions.codalab.org/competitions/2321')
+create_redirect('automl', '', 'competitions.codalab.org/competitions/2321')
 create_redirect(competitions, 'competitions', 'competitions.codalab.org')
 create_redirect(forums, 'forums', 'competitions.codalab.org')
