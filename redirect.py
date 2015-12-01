@@ -16,6 +16,7 @@ worksheets = """
 0x56dc93bcd3a647b197ad6e4b9d56f336
 0xfcace41fdeec45f3bc6ddf31107b829f
 0xba659fe363cb46e7a505c5b6a774dc8a
+0xc9db508bb80446d2b66cbc8e2c74c052
 """
 
 # wget -q --no-check-certificate https://competitions.codalab.org/competitions -O - | grep competitionID.*value
